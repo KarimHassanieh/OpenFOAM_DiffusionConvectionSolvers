@@ -1,8 +1,8 @@
-#include <iostream>
-using namsepace std;
+#include"fvCFD.H"
+
 int main()
 {
 
-
-return 0;
+Info<<"Simple 1D Example of Steady State Diffusion"<<endl;
+    return 0;
 }
