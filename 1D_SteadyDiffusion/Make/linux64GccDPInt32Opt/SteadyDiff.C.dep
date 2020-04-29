@@ -3,6 +3,7 @@ SteadyDiff.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCase.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H \
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/parRun.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Time.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMesh.H \
@@ -739,6 +740,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Barycentric2DI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCase.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H :
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/parRun.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Time.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMesh.H :

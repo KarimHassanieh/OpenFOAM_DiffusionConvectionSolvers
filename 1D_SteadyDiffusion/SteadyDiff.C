@@ -29,19 +29,25 @@ Description
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
-
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 int main(int argc, char *argv[])
 {
     #include "setRootCase.H"
     #include "createTime.H"
-
+    #include "createMesh.H"
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
     Info<< nl << "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
         << "  ClockTime = " << runTime.elapsedClockTime() << " s"
         << nl << endl;
+    Info<<nl<<"Mesh details = "<<endl;
+    Info<<mesh.C()<<endl;
+    Info<<mesh.V()<<endl;
+    Info<<mesh.Cf()<<endl;
+
+
+
 
     Info<< "End\n" << endl;
 
