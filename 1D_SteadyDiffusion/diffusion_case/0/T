@@ -9,48 +9,28 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      fvSchemes;
+    class       volScalarField;
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-ddtSchemes
-{
-    default         steadyState;
-}
+dimensions      [0 0 0 1 0 0 0];
 
-gradSchemes
-{
-    default         none;
-    grad(T)         Gauss linear;
-}
+internalField   uniform 0;
 
-divSchemes
+boundaryField
 {
-    default         none;
-}
+    left 
+    {
+        type            fixedValue;
+        value           uniform 100;
+    }
 
-laplacianSchemes
-{
-    default         none;
-    laplacian(Diff,T) Gauss linear corrected;
+    right
+    {
+        type            fixedValue;
+        value           uniform 500;
+    }
 }
-
-interpolationSchemes
-{
-    default         none;
-}
-
-snGradSchemes
-{
-    default         none;
-}
-
-fluxRequired
-{
-    default         no;
-}
-
 
 // ************************************************************************* //

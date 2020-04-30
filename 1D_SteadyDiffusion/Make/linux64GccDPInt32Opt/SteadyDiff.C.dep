@@ -1,9 +1,11 @@
 $(OBJECTS_DIR)/SteadyDiff.C.dep: \
 SteadyDiff.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/simpleControl.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCase.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H \
+createFeild.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/parRun.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Time.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMesh.H \
@@ -26,6 +28,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/constants.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/OSspecific.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/argList.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/timeSelector.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControl.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionConvergenceControl.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Pstream.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOstreams.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/TimePaths.H \
@@ -120,6 +124,10 @@ $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/sigQuit.H \
 $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/sigSegv.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/argListI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/scalarRanges.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControlI.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControl.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControl.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UPstream.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DynamicList.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/gatherScatter.C \
@@ -245,6 +253,11 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fileNameI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UList.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/scalarRange.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControl.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControlTemplates.C \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlTemplates.C \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ListOps.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LIFOStack.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DynamicListI.H \
@@ -382,6 +395,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/HashTableIO.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/nullObject.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UListI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UList.C \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlI.H \
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ops.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ListOpsTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Ostream.H \
@@ -498,6 +513,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LListIO.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/nullObjectI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Swap.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UListIO.C \
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H \
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/foamVersion.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fileOperation.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/keyTypeI.H \
@@ -541,7 +558,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/lduInterfaceField.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/SolverPerformance.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrix.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/diagTensorField.H \
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduInterfaceField.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/coupledPolyPatch.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduInterfaceFieldPtrsList.H \
@@ -569,6 +585,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/objectMapI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ConstantI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Constant.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Function1New.C \
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.C \
 $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/fileMonitor.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tmpNrc.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FixedListIO.C \
@@ -594,8 +611,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/SolverPerformance.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrix.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/diagTensor.H \
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H \
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/localIOdictionary.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricBoundaryField.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFieldFunctions.C \
@@ -643,7 +658,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixPreconditioner.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSmoother.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSolver.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DiagTensor.H \
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/emptyPolyPatch.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/commSchedule.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/globalMeshData.H \
@@ -738,9 +752,11 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/SpatialTensorI.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Barycentric2DI.H \
 
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/simpleControl.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCase.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H :
+createFeild.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/parRun.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Time.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMesh.H :
@@ -763,6 +779,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/constants.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/OSspecific.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/argList.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/timeSelector.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControl.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionConvergenceControl.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Pstream.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOstreams.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/TimePaths.H :
@@ -857,6 +875,10 @@ $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/sigQuit.H :
 $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/sigSegv.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/argListI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/scalarRanges.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControl.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fluidSolutionControlI.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControl.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControl.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UPstream.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DynamicList.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/gatherScatter.C :
@@ -982,6 +1004,11 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fileNameI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UList.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/scalarRange.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nonOrthogonalSolutionControlI.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControl.H :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/convergenceControlTemplates.C :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlTemplates.C :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/singleRegionSolutionControlI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ListOps.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LIFOStack.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DynamicListI.H :
@@ -1119,6 +1146,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/HashTableIO.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/nullObject.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UListI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UList.C :
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlI.H :
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ops.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ListOpsTemplates.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Ostream.H :
@@ -1235,6 +1264,8 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LListIO.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/nullObjectI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Swap.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/UListIO.C :
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H :
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/foamVersion.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fileOperation.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/keyTypeI.H :
@@ -1278,7 +1309,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/lduInterfaceField.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/SolverPerformance.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrix.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/diagTensorField.H :
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduInterfaceField.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/coupledPolyPatch.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduInterfaceFieldPtrsList.H :
@@ -1306,6 +1336,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/objectMapI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/ConstantI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Constant.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Function1New.C :
+$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.C :
 $(WM_PROJECT_DIR)/src/OSspecific/POSIX/lnInclude/fileMonitor.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tmpNrc.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/FixedListIO.C :
@@ -1331,8 +1362,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/SolverPerformance.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixI.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrix.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/diagTensor.H :
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.H :
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Residuals.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/localIOdictionary.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricBoundaryField.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFieldFunctions.C :
@@ -1380,7 +1409,6 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixPreconditioner.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSmoother.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/LduMatrixSolver.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/DiagTensor.H :
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/MeshObject.C :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/emptyPolyPatch.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/commSchedule.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/globalMeshData.H :
