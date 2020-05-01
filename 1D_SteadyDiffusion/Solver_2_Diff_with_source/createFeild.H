@@ -27,54 +27,52 @@ Application
 Description
 
 \*---------------------------------------------------------------------------*/
+// Read from Transport Properties diffusivity
+    Info <<"Reading Transport Properties"<<endl;
+    IOdictionary transportProperties
+(
+    IOobject
+(  
+    "transportProperties",
+     runTime.constant(),
+     mesh,
+     IOobject::MUST_READ_IF_MODIFIED,
+     IOobject::NO_WRITE
+)
+      
+);    
 
-#include "fvCFD.H"
-#include "simpleControl.H"
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+dimensionedScalar Diffusivity
+(
+   transportProperties.lookup("Diffusivity")
 
-int main(int argc, char *argv[])
-{
+);
+dimensionedScalar Source
+(
+   transportProperties.lookup("Source")
 
-
-
-    #include "setRootCase.H"
-    #include "createTime.H"
-    #include "createMesh.H"
-    #include "createFeild.H"
-    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-//    simpleControl simple(mesh);
-//    Info<<nl<<"Mesh details = "<<endl;
-//    Info<<nl<<"Mesh Center details = "<<endl;
-//    Info<<mesh.C()<<endl;
-//    Info<<nl<<"Mesh Volume details = "<<endl;
-//    Info<<mesh.V()<<endl;
-//    Info<<nl<<"Mesh Surface details = "<<endl;
-//    Info<<mesh.Cf()<<endl;
-
-
-
-for(int i=0;i<1;i++){
-
-     fvScalarMatrix Eqn
-      (
-
-        fvm::laplacian(Diffusivity,T)
-
-       );
-       Eqn.solve();
-
-     runTime++;
-runTime.write();
- 
-  }     
+);
 
 
 
-   
-    Info<< "End\n" << endl;
 
-    return 0;
-}
+Info<<"Simulating for Diffusivity Value = "<<Diffusivity.value()<<endl;
+
+Info <<"Reading Temperature Feild"<<endl;
+    volScalarField T
+(
+    IOobject
+(  
+    "T",
+     runTime.timeName(),
+     mesh,
+     IOobject::MUST_READ,
+     IOobject::AUTO_WRITE
+),
+    mesh  
+);    
+Info<<"Simulating Initial Temperature with following set = "<<endl;
+Info<<T.internalField()<<endl;
 
 
 // ************************************************************************* //
