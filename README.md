@@ -1,4 +1,4 @@
-# OpenFOAM_Cases-Pure Diffusuion
+# OpenFOAM_Cases-Diffusion
 The below cases were simulated using oepnFOAM. The cases are only concerned with pure diffusion. Each example has a seperate solver. 
 ## Case of Pure Disffusion : 
 ![Temp Vs Distance in case of pure diffusion](1D_SteadyDiffusion/Results/Example_1_Diffusion_only/temp.distance.png)
