@@ -5,7 +5,9 @@ The below cases were simulated using oepnFOAM. The cases are only concerned with
 ## Case of Pure Disffusion :
 
 The below equation describes a state of pure diffusion :
-<p align="center"><img src="https://rawgit.com/KarimHassanieh/OpenFOAM_Cases-/master/svgs/ce6780d7e39d7370931fb6be917ec792.svg?invert_in_darkmode" align=middle width=73.260165pt height=35.777445pt/></p>
+$$
+\Gamma\frac{\partial^2 T}{\partial x^2}=0
+$$
 
 
 ![Temp Vs Distance in case of pure diffusion](1D_SteadyDiffusion/Results/Example_1_Diffusion_only/temp.distance.png)
