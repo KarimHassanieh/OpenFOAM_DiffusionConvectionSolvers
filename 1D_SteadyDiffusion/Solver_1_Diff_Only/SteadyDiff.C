@@ -63,9 +63,10 @@ while(simple.loop(runTime)){
        );
        Eqn.solve();
 
-     runTime++;
-runTime.write();
- 
+  if (runTime.outputTime())
+    {
+        runTime.write();
+    }
   }     
 
 

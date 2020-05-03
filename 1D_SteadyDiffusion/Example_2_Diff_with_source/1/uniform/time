@@ -9,33 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    location    "2";
-    object      T;
+    class       dictionary;
+    location    "1/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 1 0 0 0];
+value           1;
 
-internalField   nonuniform List<scalar> 5(140 220 300 380 460);
+name            "1";
 
-boundaryField
-{
-    left
-    {
-        type            fixedValue;
-        value           uniform 100;
-    }
-    right
-    {
-        type            fixedValue;
-        value           uniform 500;
-    }
-    defaultFaces
-    {
-        type            empty;
-    }
-}
+index           1;
+
+deltaT          1;
+
+deltaT0         1;
 
 
 // ************************************************************************* //
