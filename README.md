@@ -1,6 +1,14 @@
 # OpenFOAM_Cases-Diffusion
 The below cases were simulated using oepnFOAM. The cases are only concerned with pure diffusion. Each example has a seperate solver. 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
+
 ## Case of Pure Disffusion : 
 ![Temp Vs Distance in case of pure diffusion](1D_SteadyDiffusion/Results/Example_1_Diffusion_only/temp.distance.png)
 ![Initial State](1D_SteadyDiffusion/Results/Example_1_Diffusion_only/initial.png)
